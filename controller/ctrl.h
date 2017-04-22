@@ -19,6 +19,17 @@ public:
 };
 
 class ControllerCls {
+	int argc;
+	char ** argv;
+	char *source_file;
+	SymtabCls	*std_table;
+	PTreeCls	*parse_tree;
 
+	int init();
+	int set_options();
+	int open_file();
+public:
+	ControllerCls(int argc, char** argv);
+	void print();
 };
 #endif // __CTRL_H__
