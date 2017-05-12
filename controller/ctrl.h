@@ -1,9 +1,9 @@
 #ifndef __CTRL_H__
 #define __OPTIONS_CLS__
-class OptionsCls {
+class Options {
 	static int option_val;
 public:
-	OptionsCls();
+	Options();
 	void set_no_back_end();
 	void set_list();
 	void set_emit();
@@ -18,18 +18,18 @@ public:
 	static int format();
 };
 
-class ControllerCls {
+class Controller {
 	int argc;
 	char ** argv;
 	char *source_file;
-	SymtabCls	*std_table;
-	PTreeCls	*parse_tree;
+	Symtab	*std_table;
+	PTree	*parse_tree;
 
 	int init();
 	int set_options();
 	int open_file();
 public:
-	ControllerCls(int argc, char** argv);
+	Controller(int argc, char** argv);
 	void print();
 };
 #endif // __CTRL_H__
